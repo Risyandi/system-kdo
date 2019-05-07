@@ -31,52 +31,55 @@
 						<form action="" method="post">
 							<div class="form-group <?=form_error('platnomer') ? 'has-error' : null?>">
 								<label>Plat Nomer *</label>
-								<input type="text" name="platnomer" class="form-control" value="<?=set_value('platnomer')?>">
+								<input type="hidden" name="idmotor" value="<?= $row->id_motor ?>">
+								<input type="text" name="platnomer" class="form-control" value="<?=$this->input->post('platnomer') ? $this->input->post('platnomer') : $row->plat_no ?>">
 								<span class="help-block"><?=form_error('platnomer')?></span>
 							</div>
 							<div class="form-group <?=form_error('nomermesin') ? 'has-error' : null?>">
 								<label>Nomer Mesin *</label>
-								<input type="text" name="nomermesin" class="form-control" value="<?=set_value('nomermesin')?>">
+								<input type="text" name="nomermesin" class="form-control" value="<?=$this->input->post('nomermesin') ? $this->input->post('nomermesin') : $row->no_mesin ?>">
 								<span class="help-block"><?=form_error('nomermesin')?></span>
 							</div>
 							<div class="form-group <?=form_error('nomerrangka') ? 'has-error' : null?>">
 								<label>Nomer Rangka *</label>
-								<input type="text" name="nomerrangka" class="form-control" value="<?=set_value('nomerrangka')?>">
+								<input type="text" name="nomerrangka" class="form-control" value="<?=$this->input->post('nomerrangka') ? $this->input->post('nomerrangka') : $row->no_rangka ?>">
 								<span class="help-block"><?=form_error('nomerrangka')?></span>
 							</div>
 							<div class="form-group <?=form_error('sektor') ? 'has-error' : null?>">
 								<label>Sektor *</label>
-								<select name="sektor" class="form-control" value="<?=set_value('sektor')?>">
+								<select name="sektor" class="form-control">
+									<?php $sektor = $this->input->post('sektor') ? $this->input->post('sektor') : $row->sektor ?>
 									<option value="">--Pilih Sektor--</option>
-									<option value="Seksi Pengendali">Seksi Pengendali</option>
-									<option value="Sektor 1">Sektor 1 </option>
-									<option value="Sektor 2">Sektor 2 </option>
-									<option value="Sektor 3">Sektor 3 </option>
-									<option value="Sektor 4">Sektor 4 </option>
-									<option value="Sektor 5">Sektor 5 </option>
-									<option value="Sektor 6">Sektor 6 </option>
-									<option value="Sektor 7">Sektor 7 </option>
-									<option value="Sektor 8">Sektor 8 </option>
-									<option value="Bengkel">Bengkel </option>
+									<option value="Seksi Pengendali" <?php $sektor == "Seksi Pengendali" ? 'selected' : null ?>>Seksi Pengendali</option>
+									<option value="Sektor 1"<?= $sektor == "Sektor 1" ? 'selected' : null ?>>Sektor 1 </option>
+									<option value="Sektor 2"<?= $sektor == "Sektor 2" ? 'selected' : null ?>>Sektor 2 </option>
+									<option value="Sektor 3"<?= $sektor == "Sektor 3" ? 'selected' : null ?>>Sektor 3 </option>
+									<option value="Sektor 4"<?= $sektor == "Sektor 4" ? 'selected' : null ?>>Sektor 4 </option>
+									<option value="Sektor 5"<?= $sektor == "Sektor 5" ? 'selected' : null ?>>Sektor 5 </option>
+									<option value="Sektor 6"<?= $sektor == "Sektor 6" ? 'selected' : null ?>>Sektor 6 </option>
+									<option value="Sektor 7"<?= $sektor == "Sektor 7" ? 'selected' : null ?>>Sektor 7 </option>
+									<option value="Sektor 8"<?= $sektor == "Sektor 8" ? 'selected' : null ?>>Sektor 8 </option>
+									<option value="Bengkel"<?= $sektor == "Bengkel" ? 'selected' : null ?>>Bengkel </option>
 								</select>
 								<span class="help-block"><?=form_error('sektor')?></span>
 							</div>
 							<div class="form-group">
 								<label>Tipe Motor </label>
-								<input type="text" name="tipemotor" class="form-control" value="<?=set_value('tipemotor')?>">
+								<input type="text" name="tipemotor" class="form-control" value="<?=$this->input->post('tipemotor') ? $this->input->post('tipemotor') : $row->tipe_motor ?>">
 							</div>
 							<div class="form-group">
 								<label>Merk Motor </label>
-								<input type="text" name="merkmotor" class="form-control" value="<?=set_value('merkmotor')?>">
+								<input type="text" name="merkmotor" class="form-control" value="<?=$this->input->post('merkmotor') ? $this->input->post('merkmotor') : $row->merk_motor ?>">
 							</div>
 							<div class="form-group <?=form_error('keterangan') ? 'has-error' : null?>">
 								<label>Keterangan *</label>
-								<select name="keterangan" class="form-control" value="<?=set_value('keterangan')?>">
+								<select name="keterangan" class="form-control">
+									<?php $keterangan = $this->input->post('keterangan') ? $this->input->post('keterangan') : $row->keterangan ?>
 									<option value="">--Pilih Keadaan Unit--</option>
-									<option value="Baik">Baik</option>
-									<option value="Rusak">Rusak</option>
-									<option value="Dalam Perbaikan Bengkel">Dalam Perbaikan Bengkel</option>
-									<option value="Dalam Perbaikan ATPM">Dalam Perbaikan ATPM</option>
+									<option value="Baik" <?= $keterangan == "Baik" ? 'selected' : null ?>>Baik</option>
+									<option value="Rusak" <?= $keterangan == "Rusak" ? 'selected' : null ?>>Rusak</option>
+									<option value="Service Bengkel" <?= $keterangan == "Service Bengkel" ? 'selected' : null ?>>Service Bengkel</option>
+									<option value="Service ATPM" <?= $keterangan == "Service ATPM" ? 'selected' : null ?>>Service ATPM</option>
 								</select>
 								<span class="help-block"><?=form_error('keterangan')?></span>
 							</div>

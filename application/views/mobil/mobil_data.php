@@ -19,18 +19,18 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped tablesorter">
+            <table class="table" id="datatable">
                 <thead>
                 <tr>
-                    <th>No. <i class="fa fa-sort"></i></th>
+                    <th>No.</th>
                     <th>Plat No</th>
                     <th>Nomer Mesin</th>
                     <th>Nomer Rangka</th>
-                    <th>Sektor <i class="fa fa-sort"></i></th>
+                    <th>Sektor </th>
                     <th>Nomer Mobil</th>
                     <th>Tipe Mobil</th>
-                    <th>Merk Mobil <i class="fa fa-sort"></i></th>
-                    <th>Keterangan <i class="fa fa-sort"></i></th>
+                    <th>Merk Mobil </th>
+                    <th>Keterangan </i></th>
                     <th>Opsi</th>
                 </tr>
                 </thead>

@@ -7,7 +7,7 @@
       </ol>
       <div class="alert alert-success alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        Selamat Datang di web pendataan kendaraan dinas operasional Sudin Penanggulangan Kebakaran dan Penyelamatan Provinsi DKI Jakarta 
+        Selamat Datang di web pendataan kendaraan dinas operasional Sudin Penanggulangan Kebakaran dan Penyelamatan Jakarta Pusat
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@
             <?php foreach ($mobilBaik->result() as $key => $data) {  ?>
                 <p class="announcement-heading"><?= $data->count?></p>
               <?php } ?>
-              <p class="announcement-text">Unit Mobil Baik</p>
+              <h4><p class="announcement-text">Unit Mobil Baik</p></h4>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
             <?php foreach ($motorBaik->result() as $key => $data) {  ?>
                 <p class="announcement-heading"><?= $data->count?></p>
               <?php } ?>
-              <p class="announcement-text">Unit Motor Baik</p>
+              <h4><p class="announcement-text">Unit Motor Baik</p></h4>
             </div>
           </div>
         </div>
@@ -81,13 +81,13 @@
         <div class="panel-heading">
           <div class="row">
             <div class="col-xs-6">
-              <i class="fa fa-tasks fa-5x"></i>
+              <i class="fa fa-bell fa-5x"></i>
             </div>
             <div class="col-xs-6 text-right">
             <?php foreach ($mobilRusak->result() as $key => $data) {  ?>
                 <p class="announcement-heading"><?= $data->count?></p>
               <?php } ?>
-              <p class="announcement-text">Unit Mobil Rusak</p>
+              <h4><p class="announcement-text">Unit Mobil Rusak</p></h4>
             </div>
           </div>
         </div>
@@ -112,13 +112,137 @@
         <div class="panel-heading">
           <div class="row">
             <div class="col-xs-6">
-              <i class="fa fa-tasks fa-5x"></i>
+              <i class="fa fa-bell fa-5x"></i>
             </div>
             <div class="col-xs-6 text-right">
             <?php foreach ($motorRusak->result() as $key => $data) {  ?>
                 <p class="announcement-heading"><?= $data->count?></p>
               <?php } ?>
-              <p class="announcement-text">Unit Motor Rusak</p>
+              <h4><p class="announcement-text">Unit Motor Rusak</p></h4>
+            </div>
+          </div>
+        </div>
+        <a href="#">
+          <div class="panel-footer announcement-bottom">
+            <div class="row">
+              <div class="col-xs-6">
+              <a href="<?php echo base_url("motor");?>">
+                Lihat Data
+              </a>
+              </div>
+              <div class="col-xs-6 text-right">
+                <i class="fa fa-arrow-circle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6">
+              <i class="fa fa-wrench fa-5x"></i>
+            </div>
+            <div class="col-xs-6 text-right">
+            <?php foreach ($mServicebengkel->result() as $key => $data) {  ?>
+                <p class="announcement-heading"><?= $data->count?></p>
+              <?php } ?>
+              <h4><p class="announcement-text">Unit Mobil Dalam Perbaikan Bengkel</p></h4>
+            </div>
+          </div> <br>
+        </div>
+        <a href="#">
+          <div class="panel-footer announcement-bottom">
+            <div class="row">
+              <div class="col-xs-6">
+              <a href="<?php echo base_url("mobil");?>">
+                Lihat Data
+              </a>
+              </div>
+              <div class="col-xs-6 text-right">
+                <i class="fa fa-arrow-circle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6">
+              <i class="fa fa-wrench fa-5x"></i>
+            </div>
+            <div class="col-xs-6 text-right">
+            <?php foreach ($mtrServicebengkel->result() as $key => $data) {  ?>
+                <p class="announcement-heading"><?= $data->count?></p>
+              <?php } ?>
+              <h4><p class="announcement-text">Unit Motor Dalam Perbaikan Bengkel</p></h4>
+            </div>
+          </div> <br>
+        </div>
+        <a href="#">
+          <div class="panel-footer announcement-bottom">
+            <div class="row">
+              <div class="col-xs-6">
+              <a href="<?php echo base_url("motor");?>">
+                Lihat Data
+              </a>
+              </div>
+              <div class="col-xs-6 text-right">
+                <i class="fa fa-arrow-circle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6">
+              <i class="fa fa-wrench fa-5x"></i>
+            </div>
+            <div class="col-xs-6 text-right">
+            <?php foreach ($mServiceatpm->result() as $key => $data) {  ?>
+                <p class="announcement-heading"><?= $data->count?></p>
+              <?php } ?>
+              <h4><p class="announcement-text">Unit Mobil Dalam Perbaikan Bengkel ATPM</p></h4>
+            </div>
+          </div>
+        </div>
+        <a href="#">
+          <div class="panel-footer announcement-bottom">
+            <div class="row">
+              <div class="col-xs-6">
+              <a href="<?php echo base_url("mobil");?>">
+                Lihat Data
+              </a>
+              </div>
+              <div class="col-xs-6 text-right">
+                <i class="fa fa-arrow-circle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6">
+              <i class="fa fa-wrench fa-5x"></i>
+            </div>
+            <div class="col-xs-6 text-right">
+            <?php foreach ($mtrServiceatpm->result() as $key => $data) {  ?>
+                <p class="announcement-heading"><?= $data->count?></p>
+              <?php } ?>
+              <h4><p class="announcement-text">Unit Motor Dalam Perbaikan Bengkel ATPM</p></h4>
             </div>
           </div>
         </div>
@@ -141,7 +265,7 @@
   </div>
 
   <!-- dasboard row datatable -->
-  <div class="row">
+<!--   <div class="row">
     <div class="col-lg-12">
       <h4> Tampilkan data : 
         <div class="btn-group" >
@@ -160,9 +284,9 @@
       </h4>
     </div>
   </div>
-
-  <!-- datatable -->
-  <div class="row">
+ -->
+  <!-- datatable Mobil -->
+<!--   <div class="row">
     <div class="col-lg-12">
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -205,3 +329,48 @@
       </div>
     </div>
   </div>
+ -->
+<!-- Data table motor -->
+  <!-- <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> List Data Motor</h3>
+        </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped" style="margin-bottom:0px;">
+                <thead> 
+                  <tr>
+                    <th>No. </th>
+                    <th>Plat No</th>
+                    <th>Nomer Mesin</th>
+                    <th>Nomer rangka</th>
+                    <th>Sektor</th>
+                    <th>Nomer Mobil</th>
+                    <th>Tipe Mobil</th>
+                    <th>Merk Mobil</th>
+                    <th>Opsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                  </tr>
+                </tbody>
+               </table>
+             </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div> -->
