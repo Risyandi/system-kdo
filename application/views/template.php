@@ -10,7 +10,12 @@
     <!-- link external -->
     <link href="<?=base_url("assets/css/bootstrap.css")?>" rel="stylesheet">
     <link href="<?=base_url("assets/css/sb-admin.css")?>" rel="stylesheet">
+
+    <!-- memanggil link datatables -->
+
+    <link rel="stylesheet" type="text/css" href="<?=base_url("assets/DataTables/datatables.css")?>">
     <link rel="stylesheet" href="<?=base_url("assets/font-awesome/css/font-awesome.min.css")?>">
+  
   </head>
   <body>
 
@@ -54,7 +59,7 @@
     <!-- link external -->
     <script src="<?=base_url("assets/js/jquery-1.10.2.js")?>"></script>
     <script src="<?=base_url("assets/js/bootstrap.js")?>"></script>
-    <script src="<?=base_url("assets/js/tablesorter/jquery.tablesorter.js")?>"></script>
-    <script src="<?=base_url("assets/js/tablesorter/tables.js")?>"></script>
+    <script src="<?=base_url("assets/DataTables/datatables.js")?>"></script>
+    <script src="<?=base_url("assets/js/custom-data.js")?>"></script>
   </body>
 </html>

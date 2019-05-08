@@ -42,7 +42,7 @@ class Mobil extends CI_Controller {
                 } else {
                     $post = $this->input->post(null, TRUE);
                     $this->mobil_m->add($post);
-                    if($this->db->affected_rows() > 1) {
+                    if($this->db->affected_rows() > 0) {
                     	echo "<script>
                     			alert('Data berhasil disimpan');
                     		</script>";
@@ -76,9 +76,9 @@ class Mobil extends CI_Controller {
 		} else {
 			$post = $this->input->post(null, TRUE);
 			$this->mobil_m->edit($post);
-			if($this->db->affected_rows() > 1) {
+			if($this->db->affected_rows() > 0) {
 				echo "<script>
-						alert('Data berhasil disimpan');
+						alert('Perubahan data berhasil disimpan');
 					</script>";
 			} echo "<script>
 						window.location='".site_url('mobil')."';

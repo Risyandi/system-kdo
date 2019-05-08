@@ -80,8 +80,8 @@
 									<option value="">--Pilih Keadaan Unit--</option>
 									<option value="Baik" <?= $keterangan == "Baik" ? 'selected' : null ?>>Baik</option>
 									<option value="Rusak" <?= $keterangan == "Rusak" ? 'selected' : null ?>>Rusak</option>
-									<option value="Dalam Perbaikan Bengkel" <?= $keterangan == "Dalam Perbaikan Bengkel" ? 'selected' : null ?>>Dalam Perbaikan Bengkel</option>
-									<option value="Dalam Perbaikan ATPM" <?= $keterangan == "Dalam Perbaikan ATPM" ? 'selected' : null ?>>Dalam Perbaikan ATPM</option>
+									<option value="Service Bengkel" <?= $keterangan == "Service Bengkel" ? 'selected' : null ?>>Service Bengkel</option>
+									<option value="Service ATPM" <?= $keterangan == "Service ATPM" ? 'selected' : null ?>>Service ATPM</option>
 								</select>
 								<span class="help-block"><?=form_error('keterangan')?></span>
 							</div>

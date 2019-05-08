@@ -76,8 +76,8 @@
 									<option value="">--Pilih Keadaan Unit--</option>
 									<option value="Baik">Baik</option>
 									<option value="Rusak">Rusak</option>
-									<option value="Dalam Perbaikan Bengkel">Dalam Perbaikan Bengkel</option>
-									<option value="Dalam Perbaikan ATPM">Dalam Perbaikan ATPM</option>
+									<option value="Service Bengkel">Service Bengkel</option>
+									<option value="Service ATPM">Service ATPM</option>
 								</select>
 								<span class="help-block"><?=form_error('keterangan')?></span>
 							</div>
